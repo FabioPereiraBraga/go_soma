@@ -1,0 +1,7 @@
+steps:
+
+    - id: "Rondando o install"
+      name: 'gcr.io/cloud-builders/go'
+      env: ['GOPATH="/go"']
+      args: ['install', '.']
+
