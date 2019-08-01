@@ -1,8 +1,13 @@
-steps:  
+steps: 
+- name: 'gcr.io/cloud-builders/go'
+  args: ['install', 'soma']
+  env: ['PROJECT_ROOT=soma','GOPATH=.']
+
 - id:  'Rodando teste unitário'  
   name: 'gcr.io/cloud-builders/go'
-  args: ['test']
-  env: ['GOPATH=/go']
+  args: ['test', 'soma']
+  env: ['PROJECT_ROOT=soma','GOPATH=.']
+
 - id:  'Push da imagem'   
   name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/soma', '.']
