@@ -1,7 +1,7 @@
 FROM scratch
 
-COPY bin/hello /hello
+COPY bin/soma /soma
 
-ENTRYPOINT ["/hello"]
+ENTRYPOINT ["/soma"]
 
 
