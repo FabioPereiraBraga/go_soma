@@ -1,8 +1,9 @@
 steps: 
 - id:  'Rodando teste unitário'  
   name: 'gcr.io/cloud-builders/go'
+  env: ['GOPATH=/usr/local/go']
   args: ['test', 'soma']
-  env: ['GOPATH=/workspace']
+ 
 
 - id:  'Push da imagem'   
   name: 'gcr.io/cloud-builders/docker'
