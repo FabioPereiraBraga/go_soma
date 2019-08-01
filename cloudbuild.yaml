@@ -1,6 +1,8 @@
 steps:
 - id: "Executar test"  
   name: 'gcr.io/cloud-builders/go'
-  args: ['ls', '-la']
+  args: ['test', 'soma']
+  env: ['GOPATH=/go']
+  
 
 
