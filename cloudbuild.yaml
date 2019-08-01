@@ -1,7 +1,7 @@
 steps: 
 - id:  'Rodando teste unitário'  
   name: 'gcr.io/cloud-builders/go'
-  args: ['test', '.']
+  args: ['test', 'soma']
   env: ['PROJECT_ROOT=soma','GOPATH=.']
 
 - id:  'Push da imagem'   
