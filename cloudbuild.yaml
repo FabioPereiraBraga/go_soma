@@ -1,7 +1,6 @@
 steps:
+- id: "Executar test"  
+  name: 'gcr.io/cloud-builders/go'
+  args: ['test', 'soma']
 
-    - id: "Rondando o install"
-      name: 'gcr.io/cloud-builders/golang-project'
-      env: ['GOPATH="/go"']
-      args: ['install', '.']
 
