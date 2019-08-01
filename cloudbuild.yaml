@@ -1,5 +1,5 @@
 steps:  
-  name: 'gcr.io/cloud-builders/go'
+- name: 'gcr.io/cloud-builders/go'
   args: ['install', 'soma']
   env: ['GOPATH=.']
 - id:  'Rodando teste unitário'  
